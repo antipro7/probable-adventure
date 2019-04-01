@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -41,7 +41,7 @@ label {
   background: url(../img/error.png) no-repeat;
 }
 
-.navbar-brand{
+.navbar-brand {
   background-image: url(../img/logo.png);
   width: 50px;
   background-size: 77%;
@@ -49,30 +49,30 @@ label {
   background-position: center center;
 }
 
-.container-small{
+.container-small {
   max-width: 500px;
 }
 
-.btn-block.btn-primary{
+.btn-block.btn-primary {
   background-color: #26b864;
   border-color: #26b864;
 }
 
-.btn-block.btn-primary:hover{
+.btn-block.btn-primary:hover {
   background-color: #1ea457;
   border-color: #1ea457;
 }
 
-.btn-block.btn-primary:focus{
+.btn-block.btn-primary:focus {
   background-color: #11532d;
 border-color: #11532d;
 }
 
-#toggle-checkbox:checked ~ div{
+#toggle-checkbox:checked ~ div {
   display: block !important;
 }
 
-#toggle-label{
+#toggle-label {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -82,20 +82,20 @@ border-color: #11532d;
   display: none;
 }
 
-#toggle-label:hover{
+#toggle-label:hover {
   color: #333;
 }
 
 /* index.css */
-.panel-body{
+.panel-body {
   height: 500px;
 }
 
-.btn.btn-block.btn-success{
+.btn.btn-block.btn-success {
   margin-top: 20px;
 }
 
-.footer{
+.footer {
   position: absolute;
   left: 0;
   right: 0;
