@@ -3,64 +3,59 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>C706聊天室，一起来玩吧</title>
-        <meta name="description" content="一个demo">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="index.html" class="navbar-brand"></a>
-                </div>
-                <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">菜单</label>
-                <input id="toggle-checkbox" class="hidden" type="checkbox">
-                <div class="hidden-xs">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">聊天室</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="login.html">登录</a></li>
-                        <li><a href="signup.html">注册</a></li>
-                    </ul>
-                </div>
-            </div>	
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>C706聊天室，一起来玩吧</title>
+    <meta name="description" content="一个demo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand"></a>
         </div>
-        
-        <div class="container" style="padding-top:20px;">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">C706小广场</h3>
-                </div>
-                <div class="panel-body" id="content"></div>
-                <div class="panel-footer">广场记录</div>
-            </div>
-
-            <div class="form-group form-group-lg">
-                <input type="text" class="form-control" placeholder="快来说出你想说的话吧。" 
-                maxlength="80"
-                aria-describedby="sizing-addon1" id="msg">
-                
-                <button type="button" class="btn btn-block btn-success" onclick="emit()">发送</button>
-            </div>
+        <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">菜单</label>
+        <input id="toggle-checkbox" class="hidden" type="checkbox">
+        <div class="hidden-xs">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">聊天室</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html">登录</a></li>
+            <li><a href="signup.html">注册</a></li>
+          </ul>
         </div>
+      </div>	
+    </div>
+    
+    <div class="container" style="padding-top:20px;">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">C706小广场</h3>
+        </div>
+        <div class="panel-body" id="content"></div>
+        <div class="panel-footer">广场记录</div>
+      </div>
+      <div class="form-group form-group-lg">
+        <input type="text" class="form-control"     placeholder="快来说出你想说的话吧。" 
+        maxlength="80"
+        aria-describedby="sizing-addon1" id="msg">
+        <button type="button" class="btn btn-block btn-success" onclick="emit()">发送</button>
+      </div>
+    </div>
 
-        
-        
-
-        <script src="js/jQuery.js"></script>
-        <script src="js/validator.js"></script>
-        <script src="js/input.js"></script>
-        <script src="js/main.js" async defer></script>   
-    </body>
+    <script src="js/jQuery.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/main.js" async defer></script>   
+  </body>
 </html>
