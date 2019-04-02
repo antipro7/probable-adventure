@@ -1,26 +1,28 @@
-$(function(){
+$(function() {
   'use strict';
 
-  // 选中所有要验证input[data-rule]
+  // 选中所有要验证[data-rule]的input
   var $inputs = $('[data-rule]');
   var $form = $('#signup');
   var inputs = [];
   
   // jquery的each方法
-  $inputs.each(function(index,node) {
-    // 解析每一个input验证规则
+  $inputs.each(function(index, node) {
+    // 对每个input解析，传入Input构造函数
     var tmp = new Input(node);
     inputs.push(tmp);
   })
 
-  // console.log('inputs:',inputs);
+  // 登录判断
   $form.on('submit', function(e) {
     e.preventDefault();
+
+    // 触发失去焦点事件
     $inputs.trigger('blur');
     for (var i = 0; i < inputs.length; i++) {
       var item = inputs[i];
       var r = item.validator.is_valid();
-      if(!r){
+      if (!r) {
         alert('invalid');
         return;
       }
@@ -31,28 +33,10 @@ $(function(){
   })
 
   function signup() {
-    $.post(url,{
+    $.post(url, {
       name:''
     })
   }
-
-// 验证
-/* var validator = new Validator('asdasd,asdasd.',{
-      maxlength: 9,
-      minlength: 2,
-      pattern:'^[.,a-zA-Z0-9]*$',//*表示可以为空字符串，页面有判断不能为空，所以这里留*；+表示不可为空
-  });
-*/
-  // var result = validator.validate_maxlength();
-  // var result = validator.validate_minlength();
-  // var result = validator.validate_numeric();
-  // var result = validator.validate_nullable();
-  // var result = validator.validate_pattern();
-  // console.log('result',result);
-
-  // var test = new Input('#test');
-  // var valid = test.validator.is_valid();
-  // console.log('valid:',valid);
 
   // 创建一个连接，这里的参数是服务端的链接
   var socket = new WebSocket(url);
@@ -60,11 +44,11 @@ $(function(){
   function emit() {
     var text = $("#msg").val();
     var msg = {
-      "message" : text,
-      "color" : "#CECECE",
-      "bubbleColor" : "#2E2E2E",
-      "fontSize" : "14",
-      "fontType" : "微软雅黑"
+      "message": text,
+      "color": "#CECECE",
+      "bubbleColor": "#2E2E2E",
+      "fontSize": "14",
+      "fontType": "微软雅黑"
     };
 
     msg = JSON.stringify(msg);
@@ -111,7 +95,7 @@ $(function(){
   document.onkeydown = function(event){
     var e = event || window.event || arguments.callee.caller.arguments[0];
     //  keyCode == 13 enter键
-    if(e && e.keyCode == 13){ 
+    if (e && e.keyCode == 13){ 
       emit();
     }
   };
